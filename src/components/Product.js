@@ -1,14 +1,11 @@
 import React from "react";
 import "./Product.css";
-import { useStateValue } from "../providers/StateProvider";
 import { selectBasket, addToBasket } from "../features/basketSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 const Product = ({ id, title, image, price, rating }) => {
-  //   const [{ basket }, dispatch] = useStateValue();
   const basket = useSelector(selectBasket);
   const dispatch = useDispatch();
-  console.log(basket);
   const handleAddToBasket = () => {
     //dispatch the item into the data layer
     dispatch(

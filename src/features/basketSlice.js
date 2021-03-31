@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createDispatch } from "@reduxjs/toolkit";
 
 export const basketSlice = createSlice({
   name: "basket",
@@ -7,13 +7,7 @@ export const basketSlice = createSlice({
   },
   reducers: {
     addToBasket: (state, action) => {
-      // console.log(action);
       state.basket = [...state.basket, action.payload];
-      // state.basket = {
-      //   ...state,
-      //   ,
-      // };
-      // console.log(action);
     },
   },
 });
