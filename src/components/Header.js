@@ -3,7 +3,10 @@ import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectBasket } from "../features/basketSlice";
 const Header = () => {
+  const basket = useSelector(selectBasket);
   return (
     <div className="header">
       <Link to="/">
@@ -32,10 +35,11 @@ const Header = () => {
           <span className="header_optionLineOne">You</span>
           <span className="header_optionLineTwo">Primes</span>
         </div>
+
         <Link to="/checkout">
           <div className="header_optionBasket">
             <ShoppingBasketIcon></ShoppingBasketIcon>
-            <span className="header_optionLineTwo">0</span>
+            <span className="header_optionLineTwo">{basket?.length}</span>
           </div>
         </Link>
       </header>

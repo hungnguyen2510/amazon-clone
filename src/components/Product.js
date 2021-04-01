@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const Product = ({ id, title, image, price, rating }) => {
   const basket = useSelector(selectBasket);
+  // console.log(basket);
   const dispatch = useDispatch();
   const handleAddToBasket = () => {
     //dispatch the item into the data layer
