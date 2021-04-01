@@ -48,6 +48,13 @@ const Home = () => {
             image="https://images-na.ssl-images-amazon.com/images/I/71MRKd%2BAsvL._SX522_.jpg"
             rating={3}
           />
+          <Product
+            id={421321523}
+            title="Smart phone samsung 6"
+            price={18.99}
+            image="https://images-na.ssl-images-amazon.com/images/I/71MRKd%2BAsvL._SX522_.jpg"
+            rating={3}
+          />
         </div>
         <div className="home_row">
           <Product

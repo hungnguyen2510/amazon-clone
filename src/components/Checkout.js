@@ -1,8 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectBasket } from "../features/basketSlice";
+import BasketItem from "./BasketItem";
 import "./Checkout.css";
-import Subtotal from './Subtotal'
+import Subtotal from "./Subtotal";
 
 const Checkout = () => {
+  const baskets = useSelector(selectBasket);
+  // console.log(baskets);
   return (
     <div className="checkout">
       <div className="checkout_left">
@@ -12,15 +17,21 @@ const Checkout = () => {
           className="checkout_ads"
         />
         <div>
-            <h2 className="checkout_title">
-                Your Shopping Basket
-            </h2>
-
-            {/* BasketItem */}
+          <h2 className="checkout_title">Your Shopping Basket</h2>
+          {baskets.map((basket) => (
+            <BasketItem
+              key={basket.id}
+              id={basket.id}
+              title={basket.title}
+              price={basket.price}
+              image={basket.image}
+              rating={basket.rating}
+            />
+          ))}
         </div>
       </div>
       <div className="checkout_right">
-          <Subtotal />
+        <Subtotal />
       </div>
     </div>
   );
