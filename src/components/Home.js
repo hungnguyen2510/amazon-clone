@@ -14,14 +14,14 @@ const Home = () => {
           <Product
             id={1123421}
             title="Smart phone samsung 1"
-            price={18.99}
+            price={18.34}
             image="https://images-na.ssl-images-amazon.com/images/I/71MRKd%2BAsvL._SX522_.jpg"
             rating={5}
           />
           <Product
             id={4213212}
             title="Smart phone samsung 2"
-            price={18.99}
+            price={18.24}
             image="https://images-na.ssl-images-amazon.com/images/I/71MRKd%2BAsvL._SX522_.jpg"
             rating={4}
           />
@@ -30,28 +30,28 @@ const Home = () => {
           <Product
             id={3412321}
             title="Smart phone samsung 3"
-            price={18.99}
+            price={18.56}
             image="https://images-na.ssl-images-amazon.com/images/I/71MRKd%2BAsvL._SX522_.jpg"
             rating={3}
           />
           <Product
             id={423213214}
             title="Smart phone samsung 4"
-            price={18.99}
+            price={18.23}
             image="https://images-na.ssl-images-amazon.com/images/I/71MRKd%2BAsvL._SX522_.jpg"
             rating={5}
           />
           <Product
             id={4213215}
             title="Smart phone samsung 5"
-            price={18.99}
+            price={18.88}
             image="https://images-na.ssl-images-amazon.com/images/I/71MRKd%2BAsvL._SX522_.jpg"
             rating={3}
           />
           <Product
             id={421321523}
             title="Smart phone samsung 6"
-            price={18.99}
+            price={18.23}
             image="https://images-na.ssl-images-amazon.com/images/I/71MRKd%2BAsvL._SX522_.jpg"
             rating={3}
           />
@@ -60,7 +60,7 @@ const Home = () => {
           <Product
             id={4213216}
             title="Smart phone samsung 6"
-            price={18.99}
+            price={18.12}
             image="https://images-na.ssl-images-amazon.com/images/I/71MRKd%2BAsvL._SX522_.jpg"
             rating={3}
           />

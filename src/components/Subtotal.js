@@ -3,10 +3,11 @@ import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { selectBasket } from "../features/basketSlice";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
 
 const Subtotal = () => {
   const basket = useSelector(selectBasket);
-
+  const history = useHistory();
   const subTotal = useMemo(() => {
     return basket.reduce((amount, item) => item.price + amount, 0);
   }, [basket]);
@@ -32,7 +33,9 @@ const Subtotal = () => {
         thousandsSeparator={true}
         prefix={"$"}
       />
-      <button>Proceed to Checkout</button>
+      <button onClick={(e) => history.push("/payment")}>
+        Proceed to Checkout
+      </button>
     </div>
   );
 };
