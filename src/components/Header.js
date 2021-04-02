@@ -5,8 +5,18 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectBasket } from "../features/basketSlice";
+import { selectUser } from "../features/userSlice";
+import { auth } from "../firebase";
 const Header = () => {
   const basket = useSelector(selectBasket);
+  const user = useSelector(selectUser);
+
+  const handleAuthentication = (user) => {
+    if (user) {
+      console.log("sign out");
+      auth.signOut();
+    }
+  };
   return (
     <div className="header">
       <Link to="/">
@@ -24,10 +34,13 @@ const Header = () => {
 
       <header className="header_nav">
         <Link to="/login">
-          <div className="header_option">
-            <span className="header_optionLineOne">Hello</span>
-
-            <span className="header_optionLineTwo">Sign In</span>
+          <div className="header_option" onClick={handleAuthentication}>
+            <span className="header_optionLineOne">Hello, 
+              {user ? user[0].email : "Guest"}
+            </span>
+            <span className="header_optionLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
           </div>
         </Link>
         <div className="header_option">

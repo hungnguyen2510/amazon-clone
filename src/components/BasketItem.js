@@ -15,7 +15,7 @@ const BasketItem = ({ id, title, price, rating, image }) => {
 
   return (
     <div className="basketItem">
-      <img src={image} className="basketItem_image"></img>
+      <img src={image} className="basketItem_image" alt=""></img>
       <div className="basketItem_info">
         <p className="basketItem_title">{title}</p>
         <p className="basketItem_price">
